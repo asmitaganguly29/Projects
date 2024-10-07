@@ -1,0 +1,139 @@
+*
+{
+    box-sizing: border-box;
+}
+
+
+body
+{
+height: 100vh; /*vh means viewport height. Here we are taking the entire area of the viewport(i.e. the whole visisble area of the web page*/
+margin: 0;
+font-family: 'Times New Roman', Times, serif;
+font-size: 40px;
+background-image: linear-gradient(0deg, rgb(247, 247, 247) 23.8%, rgb(252, 221, 221) 92%);
+display: flex; /* flex is used to center everything*/
+flex-direction: column; /* flex will put things in a row so used column */
+align-items: center;
+justify-content: center;
+}
+
+.music-container
+{
+    background-color:white;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.248);
+    display: flex;
+    padding: 20px 30px;
+    position: relative;
+    margin: 100px 0;
+    z-index: 10;
+}
+
+.image-container
+{
+    position: relative;
+    width: 110px;
+}
+
+.image-container img
+{
+width: inherit;
+height: 110px;
+border-radius: 50%;
+object-fit: cover;
+position: absolute;
+bottom: 0;
+left: 0;
+animation: rotate 3s linear infinite;
+animation-play-state: paused;
+}
+
+.music-container.play .image-container img
+{
+    animation-play-state: running; 
+}
+
+@keyframes rotate
+{
+form
+{
+    transform: rotate(0deg);
+}    
+
+to
+{
+    transform: rotate(360deg);
+}
+}
+
+.navigation
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.action-button
+{
+    background-color: white;
+    border: 0;
+    color: black;
+    cursor: pointer; /* the mouse cursor to be displayed when pointing over an element. */
+    font-size: 20px;
+    padding: 10px;
+    margin: 0 20px;
+}
+
+.action-button-big
+{
+    color: black;
+    font-size: 30px;
+}
+
+.music-info
+{
+    border: 2px solid rgba(227, 149, 149, 0.5);
+background-color: rgba(227, 149, 149, 0.5);
+border-radius: 15px 15px 0 0; /* 15px on the top right and top left and 0 at the bottom */
+position: absolute;
+top: 0;
+left: 20px;
+width: calc(100% - 40px);
+opacity: 0;
+transform: translateY(0%);
+padding: 10px 10px 10px 150px;
+transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+.music-info h4
+{
+    margin: 0;
+    font-size: 20px;
+}
+
+.music-container.play .music-info
+{
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+.progress-container
+{
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+}
+
+.progress
+{
+background-color: rgb(235, 39, 39);
+border-radius: 5px;
+height: 100%;
+width: 0;
+transition: width 0.1s linear;
+}
+    

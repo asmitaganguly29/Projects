@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <h3>Music Player</h3>
+    <div class="music-container">
+        <div class="music-info">
+            <h4 id="musicname">Jaane Kyun</h4>
+            <div class="progress-container">
+                <div class="progress"></div>
+            </div>
+        </div>
+        <audio src="Music/song1.mp3" id="audio"></audio>
+        <div class="image-container">
+            <img src="images/image1.jpg" alt="image" id="image">
+        </div>
+        <div class="navigation">
+            <button id="prev" class="action-button">
+                <i class="fas fa-backward"></i>
+            </button>
+
+            <button id="play" class="action-button action-button-big">
+                <i class="fas fa-play"></i>
+            </button>
+
+            <button id="next" class="action-button">
+                <i class="fas fa-forward"></i>
+            </button>
+
+        </div>
+
+
+    </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
